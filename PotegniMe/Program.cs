@@ -18,6 +18,7 @@ using PotegniMe.Services.FileService;
 using PotegniMe.Services.RecommendService;
 using PotegniMe.Services.EmailService;
 using PotegniMe.Services.AdminService;
+using PotegniMe.Middleware;
 using DotNetEnv;
 
 
@@ -113,6 +114,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseCors("NgOrigins");
 app.UseHttpsRedirection();

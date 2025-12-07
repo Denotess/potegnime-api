@@ -2,7 +2,7 @@
 {
     public class ConflictExceptionDto : Exception
     {
-        public ConflictExceptionDto(string message) : base(message)
+        public ConflictExceptionDto(string message = "Conflict") : base(message)
         {
         }
     }

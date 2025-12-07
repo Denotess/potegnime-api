@@ -2,7 +2,7 @@
 {
     public class ExpiredTokenException : Exception
     {
-        public ExpiredTokenException(string message) : base(message)
+        public ExpiredTokenException(string message = "Token has expired") : base(message)
         {
         }
     }

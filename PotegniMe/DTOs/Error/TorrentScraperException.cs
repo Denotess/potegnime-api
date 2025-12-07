@@ -2,7 +2,7 @@
 {
     public class TorrentScraperException : Exception
     {
-        public TorrentScraperException()
+        public TorrentScraperException(string message = "External service unavailable") : base(message)
         {
         }
     }
